@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FliesControllerS:MonoBehaviour {
+public class FliesControllerS:FlyBase {
   public float time;
   GameObject fliesGene;
-  Rigidbody2D rd;
 
   void Start() {
 
-    fliesGene = GameObject.FindWithTag("Generator");
-    rd = GetComponent<Rigidbody2D>();
-    //score = 300;
+        fliesGene = GameObject.FindWithTag("Generator");
+        //score = 300;
   }
 
   void Update() {
@@ -31,13 +29,5 @@ public class FliesControllerS:MonoBehaviour {
     }
     transform.position = new Vector2(Mathf.Clamp(this.gameObject.transform.position.x, -9.0f, 9.0f),
       Mathf.Clamp(this.gameObject.transform.position.y, -4.0f, 4.0f));
-  }
-
-  void OnTriggerEnter2D(Collider2D other) {
-
-    if (other.tag == "Player") {
-      Destroy(this.gameObject);
-      fliesGene.SendMessage("destroyFlieS");
-    }
   }
 }

@@ -11,9 +11,11 @@ public class LoadTitle : MonoBehaviour {
   void Start () {
     scoreDire = GameObject.FindWithTag("GameController");
   }
-	void Update () {
+
+  void Update () {
    
   }
+
   public void OnClick() {
     //ボタンクリックによるクリックでシーン遷移
     SceneManager.LoadScene("Title");

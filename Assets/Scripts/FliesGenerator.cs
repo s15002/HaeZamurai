@@ -71,14 +71,14 @@ public class FliesGenerator:MonoBehaviour {
   }
 
   void Update() {
-    //ハエの無効時間を減らしていく
-    for ( int i = 0; i < fliesList.Count; ++ i) {
-      if (fliesList[i]) {
-        fliesList[i].SubDisableTime(Time.deltaTime);
-      } else {
-        fliesList.RemoveAt(i);
-      }
-    }
+    ////ハエの無効時間を減らしていく
+    //for ( int i = 0; i < fliesList.Count; ++ i) {
+    //  if (fliesList[i]) {
+    //    fliesList[i].SubDisableTime(Time.deltaTime);
+    //  } else {
+    //    fliesList.RemoveAt(i);
+    //  }
+    //}
 
     this.delta += Time.deltaTime;
 
@@ -141,4 +141,3 @@ public class FliesGenerator:MonoBehaviour {
     flie--;
   }
 }
-  
